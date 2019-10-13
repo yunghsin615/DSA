@@ -27,7 +27,7 @@
 
 **Stack & Queue**
 
-![](https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiszqKCw5nlAhWCHqYKHeqMAP8QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.thecrazyprogrammer.com%2F2016%2F05%2Fdifference-between-stack-and-queue.html&psig=AOvVaw3SaDxLY-m1rY5gMYFMFyvH&ust=1571065979920643)
+![](https://www.thecrazyprogrammer.com/wp-content/uploads/2016/05/Difference-Between-Stack-and-Queue.jpg)
 
 - Stack：資料以堆疊的方式呈現（疊盤子），先進後出，例子：undo，回上一頁。
    * Push：放資料進Stack
@@ -64,7 +64,7 @@
 - bubble sort：將資料由左至右兩兩相互比較、交換位子，最後一位則為已排序好之資料，再從頭開始至全部資料排序結束。
 > `6` `5` 3 1 8 7 2 -> 5 `6` `3` 1 8 7 2 -> 5 3 `6` `1` 8 7 2 以此類推
 - quick sort：在資料中找基準點，以基準點將資料分為兩堆，在兩堆中繼續找基準點分為四堆，直至排序完成。
-   *n*1/2**x＝1 -> log2n=x.
+   * n*1/2**x＝1 -> log2n=x.
 > 6 5 `3` 1 8 7 2 -> 1 2 `3` 6 5 8 7 -> `1` 2 3 6 5 8 `7` -> 1 2 3 6 5 `7` 8 以此類推
 
 ## Week 5
