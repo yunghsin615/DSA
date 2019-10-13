@@ -5,19 +5,25 @@
  巨資三B 金元萱
  ```
 
-## week 1
+## Week 1
 
+中秋節放假  
 
-      中秋節放假  
+## Week 2 
 
-## week 2 
+**Linked List & Array**
 
-**Linked list & Array**
+   ![](https://github.com/alrightchiu/SecondRound/blob/master/content/Algorithms%20and%20Data%20Structures/BasicDataStructures/LinkedList/Intro/f1.png?raw=true)
 
+- Linked List：由節點（node）組成資料，再由poiner指向下一個節點，藉此串連起來，以null表達終點，可以不連續的資料型態儲存在記憶體中。
+   * 優點：可利用記憶體中零散空間，需要多少就使用多少
+   * 缺點：無法隨機存取、查詢，需走訪各節點
 
-        Linked list由節點（node）組成資料，再由poiner指向下一個節點，藉此串連起來，因可利用記憶體中零散空間，需要多少就使用多少；有別於Array，已連續資料型態儲存在記憶體中，容易浪費空間。  
-
-## week 3
+- Array：以連續的資料型態儲存在記憶體中。
+   * 優點：使用容易
+   * 缺點：刪除與插入資料較為麻煩、浪費不必要的記憶體空間
+   
+## Week 3
 
 **Stack & Queue**
 
@@ -36,7 +42,7 @@
    * IsEmpty：確認Queue裡是否有資料
    * getSize：回傳資料個數
 
-## week 4
+## Week 4
 
 **Set Mismatch**
 
@@ -53,7 +59,12 @@
 
 - Insertion Sort：將資料以左至右依序檢視，由第一筆開始插入以排序好之資料，插入時以右至左檢視資料。
 > `6` 5 3 1 8 7 2 -> 6 `5` 3 1 8 7 2 -> 5 6 `3` 1 8 7 2 -> 3 5 6 `1` 8 7 2 以此類推 
-- bubble sort：一次比對、交換一項
-- insertion sort：全部比對完才進行交換
-- quick sort：在數列中找中間值，分成兩堆比較大小交換位子
--   n*1/2**x＝1 -> log2n=x
+- bubble sort：將資料由左至右兩兩相互比較、交換位子，最後一位則為已排序好之資料，再從頭開始至全部資料排序結束。
+> `6` `5` 3 1 8 7 2 -> 5 `6` `3` 1 8 7 2 -> 5 3 `6` `1` 8 7 2 以此類推
+- quick sort：在資料中找基準點，以基準點將資料分為兩堆，在兩堆中繼續找基準點分為四堆，直至排序完成。
+   *n*1/2**x＝1 -> log2n=x.
+> 6 5 `3` 1 8 7 2 -> 1 2 `3` 6 5 8 7 -> `1` 2 3 6 5 8 `7` -> 1 2 3 6 5 `7` 8 以此類推
+
+## Week 5
+
+國慶日放假
