@@ -27,6 +27,8 @@
 
 **Stack & Queue**
 
+![](https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiszqKCw5nlAhWCHqYKHeqMAP8QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.thecrazyprogrammer.com%2F2016%2F05%2Fdifference-between-stack-and-queue.html&psig=AOvVaw3SaDxLY-m1rY5gMYFMFyvH&ust=1571065979920643)
+
 - Stack：資料以堆疊的方式呈現（疊盤子），先進後出，例子：undo，回上一頁。
    * Push：放資料進Stack
    * Pop：將最上面資料移除
