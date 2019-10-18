@@ -1,4 +1,4 @@
-```python
+
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -122,4 +122,4 @@ class MyLinkedList:
         self.size -= 1
         pred.next = succ
         succ.prev = pred
-```
+
