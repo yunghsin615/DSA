@@ -37,3 +37,4 @@ for 迴圈與 while 迴圈的差別在於，for 迴圈以固定數量的數值�
 
 
 # 流程圖
+![](https://i.imgur.com/36cIWve.jpg)
