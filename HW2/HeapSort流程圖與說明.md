@@ -4,14 +4,14 @@
 
 # 學習歷程與說明
 ## 原本的構想：程式碼中的 comparison_1 函式
-一開始沒有頭緒，只能先想出如何比較父節點與子節點大小並交換，也就是程式碼中 comparison 的部分，卻忽略了很多細節，於是參考了以下網站，並自己重寫了一遍如下。
+一開始沒有頭緒，只能先想出如何比較父節點與子節點大小並交換，也就是程式碼中 comparison 的部分，卻忽略了很多細節，於是參考了以下網站，並自己重寫了一遍。
    * [參考網站](https://github.com/minsuk-heo/problemsolving/blob/master/sort/HeapSort.py)
    
 ## 後來更正：程式碼中的 heap_sort 函式
 ### Part 1 — comparison：先設一個比較的公式
    * array = [ 8, 2, 10, 5, 9, 1, 6, 3, 7, 4 ]
 1. 父節點 i 為變數 biggest，left 為左子節點，right 為右子節點。
-2. left 小於等於陣列長度減 1（若陣列有10個數字，left 卻只能走到位置9，因位置從0開始），left 的數字大於 i 的數字，此時 left 為變數 biggest（意即左子節點變為最大數）。
+2. left 小於等於陣列長度減 1（若陣列有 10 個數字，left 只能走到位置 9，因位置從 0 開始），left 的數字大於 i 的數字，此時 left 為變數 biggest（意即左子節點變為最大數）。
 3. right 小於等於陣列長度減 1，right 的數字大於 biggest 的數字（意即無論是 i 或是 left 等於 biggest，right 的數字都必須大於他才成立），此時 right 為變數 biggest（意即右子節點變為最大數）。
    * 若 i = 1（數字 2 ），left = 3（數字 5 ），right = 4（數字 9 ）。
    * left 的數字 5 大於 i 的數字 2，此時 left 為 biggest。
@@ -24,7 +24,7 @@
 2. 當最後一個父節點大於等於 0（意即位置不能是負數），呼叫 comparison 函式，以 parent 為 i。
 3. 比較完畢後，parent 往前順移一位，跑 while 迴圈，直至跑完所有父節點，形成 Max Heap。
 ### Part 3 — heapsort：將 Max Heap 第一個節點擺至最後，直至排序完成。
-1. heapsort 函式包含著以上兩個函式，先定義 n 為陣列長度。
+1. 先定義 n 為陣列長度。
 2. 呼叫 heapify 函式，排出 Max Heap。
 3. 設 end 為陣列長度減 1，為最後一個數的位置。
 4. 當 end 大於 0（意即陣列至少有兩個數），陣列中位置 0 的數字與 end 的數字交換，此時最後一個位置的數為最大值並且排序完成。
