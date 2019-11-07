@@ -4,7 +4,7 @@
 
 # 學習歷程與說明
 ## 原本的構想：程式碼中的 comparison_1 函式
-一開始沒有頭緒，只能先想出如何比較父節點與子節點大小並交換，也就是程式碼中 comparison 的部分，卻忽略了很多細節，於是參考了以下網站，並自己重寫了一遍。
+一開始沒有頭緒，只能先想出如何比較父節點與子節點大小並交換，也就是程式碼中 comparison 的部分，卻忽略了很多細節，於是參考了以下網站，並**自己重寫了一遍**。
    * [參考網站](https://github.com/minsuk-heo/problemsolving/blob/master/sort/HeapSort.py)
    
 ## 後來更正：程式碼中的 heap_sort 函式
