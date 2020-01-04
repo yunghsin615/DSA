@@ -21,7 +21,7 @@ class Graph():
     def Dijkstra(self, s): 
         dis = [float("inf")] * self.V
         com = [float("inf")] * self.V
-        dis[0] = 0
+        dis[s] = 0
         
         for i in range(len(g.graph[s])):
             if g.graph[s][i] > 0:
