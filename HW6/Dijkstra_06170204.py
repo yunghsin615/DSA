@@ -23,20 +23,20 @@ class Graph():
         com = [float("inf")] * self.V
         dis[s] = 0
         
-        for i in range(len(g.graph[s])):
-            if g.graph[s][i] > 0:
-                dis[i] = g.graph[s][i]
-                com[i] = g.graph[s][i]
+        for i in range(len(self.graph[s])):
+            if self.graph[s][i] > 0:
+                dis[i] = self.graph[s][i]
+                com[i] = self.graph[s][i]
                 
         while com != [float("inf")] * self.V:
             s = com.index(min(com))
             com[s] = float("inf")
-            for j in range(len(g.graph[s])):
-                if g.graph[s][j] == 0:
+            for j in range(len(self.graph[s])):
+                if self.graph[s][j] == 0:
                     continue
-                elif dis[s] + g.graph[s][j] < dis[j]:
-                    dis[j] = dis[s] + g.graph[s][j]
-                    com[j] = dis[s] + g.graph[s][j]
+                elif dis[s] + self.graph[s][j] < dis[j]:
+                    dis[j] = dis[s] + self.graph[s][j]
+                    com[j] = dis[s] + self.graph[s][j]
                     
         dict = {}
         for k in range (self.V):
@@ -45,38 +45,38 @@ class Graph():
         return dict
     
     def Kruskal(self):
-        g.graph.sort()
+        self.graph.sort()
         root = [-1] * self.V
         res = []
         dict = {}
         
-        for i in range(0,len(g.graph)):
-            if root[g.graph[i][1]] == root[g.graph[i][2]]:
-                if root[g.graph[i][1]] == -1 and root[g.graph[i][2]] == -1:
-                    root[g.graph[i][1]] = g.graph[i][1]
-                    root[g.graph[i][2]] = g.graph[i][1]
-                    res.append(g.graph[i][0])
+        for i in range(0,len(self.graph)):
+            if root[self.graph[i][1]] == root[self.graph[i][2]]:
+                if root[self.graph[i][1]] == -1 and root[self.graph[i][2]] == -1:
+                    root[self.graph[i][1]] = self.graph[i][1]
+                    root[self.graph[i][2]] = self.graph[i][1]
+                    res.append(self.graph[i][0])
                 else:
                     continue
             else:
-                if root[g.graph[i][1]] == -1:
-                    root[g.graph[i][1]] = g.graph[i][1]
+                if root[self.graph[i][1]] == -1:
+                    root[self.graph[i][1]] = self.graph[i][1]
                     j = 0
-                    temp = root[g.graph[i][2]]
+                    temp = root[self.graph[i][2]]
                     while j < len(root):
                         if root[j] == temp:
-                            root[j] = g.graph[i][1]
+                            root[j] = self.graph[i][1]
                         j += 1
-                elif root[g.graph[i][2]] == -1:
-                    root[g.graph[i][2]] = root[g.graph[i][1]]
+                elif root[self.graph[i][2]] == -1:
+                    root[self.graph[i][2]] = root[self.graph[i][1]]
                 else:
-                    temp1 = root[g.graph[i][2]]
+                    temp1 = root[self.graph[i][2]]
                     for k in range(0,len(root)):
                         if root[k] == temp1:
-                            root[k] = root[g.graph[i][1]]
-                res.append(g.graph[i][0])
+                            root[k] = root[self.graph[i][1]]
+                res.append(self.graph[i][0])
                 
-            h = str(g.graph[i][1]) + '-' + str(g.graph[i][2])
+            h = str(self.graph[i][1]) + '-' + str(self.graph[i][2])
             dict[h] = res[-1]
         
         return dict
